@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>萝莉云</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<style type="text/css">
+			p{
+				margin: 0px;
+				padding: 0px;
+				color: #fff;
+				
+			}
+			body{
+				margin: 0px;
+				 background-color: #E27A8D;
+				 font-family: "微软雅黑";
+				 overflow-x:hidden;
+			}
+			.nav{
+				background: rgba(56, 43, 54, 0.4);
+				filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#19ffffff,endColorstr=#19ffffff);
+				height: 50px;
+				width: 100%;
+			}
+			.nav .nav-content{
+				font-size: 30px;
+				line-height: 50px;
+				width: 80%;
+				margin: 0px auto;
+			}
+			.content{
+				margin-top: 160px;
+				margin-left: 60%;
+			}
+			.content .login{
+				width: 420px;
+				height: 360px;
+				background-color: #fff;
+				box-shadow: 2px 2px 5px 2px #888888;
+			}
+			.content .login .title{
+				padding-top: 10px;
+				padding-left: 30px;
+				font-size: 1.5em;
+				
+			}
+			.content .login .login-main{
+				margin-top: 30px;
+				text-align: center;
+				width: 75%;
+				margin-left: auto;
+				margin-right: auto;
+				
+			}
+			.content .login .login-main .input{
+				 width: 90%;
+				padding: 20px 0px 20px 30px;
+				    border: 1px solid #989898;
+				background-repeat: no-repeat;
+				
+				
+			}
+		.content .login .login-main .pass{
+			background-image: url(https://loliyun.cn/img/userpass.png);
+			 background-position: 2px -55px;
+		}
+		.content .login .login-main .user{
+			background-image: url(img/userpass.png);
+			background-position: 2px 8px;
+		}
+	.content .login .login-main .login-button {
+    height: 52px;
+    border: 1px solid #0381AA;
+    border-radius: 2px;
+    width: 100%;
+    background-color: #00A7DE;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 30px;
+	}
+	.content .login .login-regdiv{
+		width: 100%;
+		background-color:rgb(51, 51, 51);
+		text-align: center;
+	position:relative;
+	top: 33px;
+	height: 60px;
+	line-height: 60px;
+	font-size: 1.8em;
+
+	}
+	.content .login .login-regdiv a{
+		color: #fff;
+		text-decoration: none;
+	}
+	.oneimg{
+	 position: absolute;
+	 top: 0px;
+	 left: 0px;
+	 width: 100%;
+	 height: 100%;
+	z-index: -2;	 
+	}
+	@media screen and (max-width: 800px) {
+   .content {
+    margin-top: 70px;
+	margin-left: auto;
+	margin-right: auto;
+	width:360px;
+   
+}
+	.content .login{
+				width: 360px;
+		
+			}
+}
+	@media screen and (max-width: 360px) {
+   .content {
+    margin-top: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	width:320px;
+   
+}
+	.content .login{
+				width: 320px;
+		
+			}
+}
+					</style>
+	</head>
+	<body>
+		<div class="oneimg" id="oneimg"></div>
+		<div class="nav">
+			<div class="nav-content">
+				<p>萝莉云</p>
+			</div>
+		</div>
+		<div class="content">
+			<div class="login">
+				<div class="title">登录帐号</div>
+				<form id="loginpost" name="loginpost" method="post" action="post.php">
+
+				<div class="login-main">
+					<div class="inputdiv" ><input class="user input" type="text" id="user" name="user" value="" /></div>
+					<div class="inputdiv" ><input class="pass input" type="password" name="password"/></div>
+					<div class="login-buttondiv"><input class="login-button" type="submit" id="post" value="登录" /></div>
+				</div>
+				</form>
+					<div class="login-regdiv">
+						<a href="reg.php">注册账户</a>
+					</div>
+			</div>
+		</div>
+		
+	<script type="text/javascript">
+	 GetOneImg();
+	 ChangeOneImg();
+		function eero(){
+			alert("账号或密码错误")
+		}
+
+		  function GetOneImg(){ 
+    OneImg="https://app.haotown.cn/img/bj@"+Math.round(Math.random()*2000)+".jpg"
+     }
+    
+    function ChangeOneImg(){
+    console.log(OneImg);//调试图片地址
+    document.getElementById("oneimg").style.backgroundImage = "url("+OneImg+")";
+     }
+ 
+	</script>
+	</body>
+</html>
